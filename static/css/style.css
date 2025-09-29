@@ -1,0 +1,262 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #000;
+    color: #333;
+}
+
+/* 繝倥ャ繝繝ｼ */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 繝偵・繝ｭ繝ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ */
+.hero-section {
+    position: relative;
+    min-height: 600px;
+}
+
+.gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(180deg, #00E5D4 0%, #00A896 100%);
+    z-index: 0;
+}
+
+.services-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+/* 謗｡逕ｨ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ */
+.recruit-section, .recruit-main {
+    padding: 60px 20px;
+    background: #f5f5f5;
+}
+
+.section-image {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/static/images/office.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.overlay-text {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.overlay-text h2, .overlay-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.overlay-text p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.recruit-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.recruit-btn:hover {
+    background: #00E5D4;
+    color: #fff;
+}
+
+.recruit-image {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/static/images/team.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* ACCESS繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ */
+.access-section {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.access-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.access-info p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.map-container {
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 100px 20px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.map-placeholder {
+    font-size: 48px;
+    color: #999;
+    letter-spacing: 10px;
+}
+
+/* CONTACT繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ */
+.contact-section {
+    padding: 80px 20px;
+    background: #000;
+    text-align: center;
+}
+
+.contact-btn {
+    padding: 20px 60px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background: #00E5D4;
+    transform: scale(1.05);
+}
+
+/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢・*/
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+/* フォーム入力 */
+.contact-form-page .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #00E5D4;
+    box-shadow: 0 0 5px rgba(0,229,212,0.5);
+}
+
+.contact-form .contact-btn {
+    background: #00E5D4;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.contact-form .contact-btn:hover {
+    background: #00a896;
+    transform: scale(1.05);
+}

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ company_name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">{{ company_name }}</div>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero-section">
+            <div class="gradient-bg"></div>
+            <div class="services-grid">
+                {% for service in services %}
+                <div class="service-card">
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.subtitle }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- 採用セクション1 -->
+        <section class="recruit-section">
+            <div class="section-image">
+                <div class="overlay-text">
+                    <h2>未来を明るく照らす企業</h2>
+                    <p>テキスト（田中さん考えて）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECRUITセクション -->
+        <section class="recruit-main">
+            <h2 class="section-title">RECRUIT</h2>
+            <div class="recruit-content">
+                <div class="recruit-image">
+                    <div class="overlay-text">
+                        <h3>未来を明るく照らす企業</h3>
+                        <p>テキスト（田中さん考えて）</p>
+                        <button class="recruit-btn">採用情報はこちら</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESSセクション -->
+        <section class="access-section">
+            <h2 class="section-title">ACCESS</h2>
+            <div class="access-info">
+                <p>所在地：愛知県名古屋市中村新栄3-19-20 ロジェ千種3階</p>
+                <div class="map-container">
+                    <div class="map-placeholder">MAP</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTセクション -->
+        <section class="contact-section">
+            <a href="{% url 'main:contact' %}" class="contact-btn">CONTACT</a>
+        </section>
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

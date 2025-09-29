@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信完了 - {{ company_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">{{ company_name }}</div>
+        </div>
+    </header>
+
+    <main class="contact-success-page">
+        <section class="contact-section">
+            <h2 class="section-title">お問い合わせ送信完了</h2>
+            <p>お問い合わせありがとうございました。追ってご連絡いたします。</p>
+            <a href="{% url 'main:home' %}" class="contact-btn">ホームへ戻る</a>
+        </section>
+    </main>
+</body>
+</html>
